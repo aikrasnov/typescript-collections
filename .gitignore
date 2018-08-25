@@ -1,6 +1,5 @@
 .DS_Store
 .idea
-.idea/vcs.xml
 .vscode
 
 npm-debug.log
