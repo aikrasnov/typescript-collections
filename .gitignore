@@ -1,11 +1,9 @@
 .DS_Store
 .idea
+.idea/vcs.xml
 .vscode
 
 npm-debug.log
-# node_modules
-
-screenshots
-logs
+node_modules
 
 .eslintcache
