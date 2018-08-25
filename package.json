@@ -1,0 +1,18 @@
+{
+  "name": "algo_and_structs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:": "eslint --report-unused-disable-directives ./ --cache --format codeframe && echo '\n\\033[34mESLinted!\\033[39m\n'"
+  },
+  "author": "Aleksander Krasnovv",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "5.4.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0"
+  }
+}
