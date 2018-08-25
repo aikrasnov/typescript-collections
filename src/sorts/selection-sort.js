@@ -5,9 +5,9 @@ function selectionSort(array, reverse) {
 
         let swapIndex = i;
         for (let j = i + 1; j < array.length; j++) {
-            const takeNewValue = reverse ? array[j] < array[swapIndex] : array[j] > array[swapIndex];
+            const takeNewSwapIndex = reverse ? array[j] < array[swapIndex] : array[j] > array[swapIndex];
 
-            if (takeNewValue) {
+            if (takeNewSwapIndex) {
                 swapIndex = j;
             }
         }
