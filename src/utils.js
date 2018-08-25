@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 function arrayToString(array) {
     return `[ ${array.join(', ')} ]`
 }
@@ -21,12 +23,37 @@ function applySort(sortFunct) {
     for (const array of arraysForSort) {
         console.log(`Before sort: ${arrayToString(array)}`);
 
-        const result = sortFunct(Array.from(array), false);
-        const reversedResult = sortFunct(Array.from(array), true);
+        const result = sortFunct(array, false);
+        const reversedResult = sortFunct(array, true);
 
         console.log(`After sort: ${arrayToString(result)}`);
         console.log(`After sort (reversed): ${arrayToString(reversedResult)}`);
-        console.log()
+        console.log();
+
+        /**
+         * Sorts arrays of numbers and strings in same way
+         */
+        const sort = (first, second, symbol = 0) => {
+
+            // if it array of numbers
+            if (typeof first === 'number' && typeof second === 'number') {
+                return first - second;
+            }
+
+            const isStringArrays = typeof first === 'string' && typeof second === 'string';
+            const symbolsEqual = first[symbol] === second[symbol];
+            const endReached = symbol > first.length - 1 || symbol > second.length - 1;
+            if (isStringArrays &&  symbolsEqual && !endReached) {
+                return sort(first, second, symbol + 1);
+            }
+
+            return first.charCodeAt(symbol) - second.charCodeAt(symbol);
+        };
+
+        array.sort(sort);
+
+        assert.deepStrictEqual(array, result);
+        assert.deepStrictEqual(array.reverse(), reversedResult);
     }
 }
 
