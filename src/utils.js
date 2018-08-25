@@ -15,6 +15,7 @@ function applySort(sortFunct) {
         [5, 5, 5, 5, 5],
         [-1, -2, -3, -4],
         [-33, 33, 1, -6],
+        [1, 2, 3, 4, 5, 6, 1, 2, 3],
         ['a', 'b', 'd', 'c'],
         ['c', 'a', 'c', 'b'],
     ];
@@ -52,8 +53,8 @@ function applySort(sortFunct) {
 
         array.sort(sort);
 
-        assert.deepStrictEqual(array, result);
-        assert.deepStrictEqual(array.reverse(), reversedResult);
+        assert.deepStrictEqual(array, result, 'error in sort');
+        assert.deepStrictEqual(array.reverse(), reversedResult, 'error in reversed sort');
     }
 }
 
