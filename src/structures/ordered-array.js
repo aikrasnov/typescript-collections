@@ -1,4 +1,5 @@
 const {arrayToString} = require('../utils');
+const assert = require('assert');
 
 class OrderedArray {
 
@@ -27,6 +28,7 @@ class OrderedArray {
 
         if (this.storage.length === 0) {
             this.storage.push(element);
+            return;
         }
 
         let insertIndex;
@@ -79,6 +81,8 @@ array.add(3);
 array.add(-4);
 array.add(5);
 array.add(6);
+
+assert.deepStrictEqual(array.storage, [51, 6, 5, 3, -2, -4], 'Array should be sorted');
 
 console.log(array.linearSearch(5));
 console.log(array.linearSearch(-1235));
