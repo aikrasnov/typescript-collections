@@ -1,5 +1,28 @@
 const assert = require('assert');
 
+/**
+ * Sorts arrays of numbers and strings in same way
+ */
+const sort = (first, second, symbol = 0) => {
+
+    // if it array of numbers
+    if (typeof first === 'number' && typeof second === 'number') {
+        return first - second;
+    }
+
+    const isStringArrays = typeof first === 'string' && typeof second === 'string';
+    const symbolsEqual = first[symbol] === second[symbol];
+    const endReached = symbol > first.length - 1 || symbol > second.length - 1;
+    if (isStringArrays &&  symbolsEqual && !endReached) {
+        return sort(first, second, symbol + 1);
+    }
+
+    return first.charCodeAt(symbol) - second.charCodeAt(symbol);
+};
+
+/**
+ * Get nice string representation of array
+ */
 function arrayToString(array) {
     return `[ ${array.join(', ')} ]`
 }
@@ -31,26 +54,6 @@ function applySort(sortFunct) {
         console.log(`After sort (reversed): ${arrayToString(reversedResult)}`);
         console.log();
 
-        /**
-         * Sorts arrays of numbers and strings in same way
-         */
-        const sort = (first, second, symbol = 0) => {
-
-            // if it array of numbers
-            if (typeof first === 'number' && typeof second === 'number') {
-                return first - second;
-            }
-
-            const isStringArrays = typeof first === 'string' && typeof second === 'string';
-            const symbolsEqual = first[symbol] === second[symbol];
-            const endReached = symbol > first.length - 1 || symbol > second.length - 1;
-            if (isStringArrays &&  symbolsEqual && !endReached) {
-                return sort(first, second, symbol + 1);
-            }
-
-            return first.charCodeAt(symbol) - second.charCodeAt(symbol);
-        };
-
         array.sort(sort);
 
         assert.deepStrictEqual(array, result, 'error in sort');
@@ -60,4 +63,6 @@ function applySort(sortFunct) {
 
 module.exports = {
     applySort,
+    sort,
+    arrayToString,
 };
