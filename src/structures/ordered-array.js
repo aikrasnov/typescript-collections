@@ -93,13 +93,13 @@ console.log();
 
 let searched;
 console.log('Generate array of numbers...');
-const count = 5000; // set bigger number for see different beetween linear and binary search
+const count = 100000; // set bigger number for see different beetween linear and binary search
 let time = new Date().getTime();
 for (const number of [...new Array(count)].map(() => Number((Math.random() * count).toFixed(0)))) {
     searched = number;
     array.add(number);
 
-    if ((array.storage.length % 100000) === 0) {
+    if ((array.storage.length % 1000) === 0) {
         console.log(`Done ${array.storage.length} of ${count} in ${new Date().getTime() - time}ms`);
         time = new Date().getTime();
     }
