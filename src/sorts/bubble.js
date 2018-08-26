@@ -20,4 +20,3 @@ function bubbleSort(unsortedArray, reverse) {
 }
 
 applySort(bubbleSort);
-

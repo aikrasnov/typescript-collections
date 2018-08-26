@@ -4,6 +4,7 @@ module.exports = {
     },
     rules: {
         "indent": ["error", 4],
-        "no-unused-vars": ["error"]
+        "no-unused-vars": ["error"],
+        "eol-last": ["error", "always"]
     }
 };
