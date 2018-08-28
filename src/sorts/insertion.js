@@ -1,5 +1,6 @@
 const {applySort} = require('../utils');
 
+// https://en.wikipedia.org/wiki/Insertion_sort
 function insertionSort(unsortedArray, reverse) {
     const array = Array.from(unsortedArray);
 

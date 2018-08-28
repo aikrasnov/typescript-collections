@@ -1,5 +1,6 @@
 const {applySort} = require('../utils');
 
+// https://en.wikipedia.org/wiki/Selection_sort
 function selectionSort(unsortedArray, reverse) {
     const array = Array.from(unsortedArray);
 

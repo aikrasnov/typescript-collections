@@ -1,5 +1,6 @@
 const {applySort} = require('../utils');
 
+// https://en.wikipedia.org/wiki/Bubble_sort
 function bubbleSort(unsortedArray, reverse) {
     const array = Array.from(unsortedArray);
 
