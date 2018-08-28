@@ -1,3 +1,4 @@
+// https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
 const assert = require('assert');
 
 class Queue {

@@ -1,6 +1,7 @@
 const assert = require('assert');
 
-class CycleQueue {
+// https://en.wikipedia.org/wiki/Circular_buffer
+class CircularQueue {
     constructor(size) {
         if (typeof size !== 'number') {
             throw new Error('size should be number');
@@ -37,7 +38,7 @@ class CycleQueue {
     }
 }
 
-const queue = new CycleQueue(5);
+const queue = new CircularQueue(5);
 
 queue.insert(1);
 queue.insert(2);

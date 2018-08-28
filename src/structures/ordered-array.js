@@ -1,6 +1,7 @@
 const {arrayToString} = require('../utils');
 const assert = require('assert');
 
+// https://en.wikipedia.org/wiki/Sorted_array
 class OrderedArray {
 
     /**
