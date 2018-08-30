@@ -7,3 +7,4 @@ require('./src/structures/stack');
 require('./src/structures/queue');
 require('./src/structures/queue-cycle');
 require('./src/structures/deque');
+require('./src/structures/queue-priority');
