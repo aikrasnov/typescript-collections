@@ -12,7 +12,7 @@ export function selectionSort<T extends Comparable<T>>(unsortedArray: T[], rever
 
             if (compareResult === -1 && reverse) {
                 swapIndex = j;
-            } else if (compareResult === 1) {
+            } else if (compareResult === 1 && !reverse) {
                 swapIndex = j;
             }
         }
