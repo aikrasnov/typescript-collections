@@ -2,6 +2,8 @@ import {bubbleSort} from './src/sorts/bubble';
 import {insertionSort} from './src/sorts/insertion';
 import {selectionSort} from './src/sorts/selection';
 import {Comparable} from './src/utils/comparable';
+import {OrderedArray} from './src/structures/array-based/ordered-array';
+import {Stack} from './src/structures/array-based/stack';
 
 class ComparableTestClass implements Comparable<ComparableTestClass> {
     private x: number;
