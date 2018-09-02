@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-eslint-rules"
+  ],
+  "rules": {
+    "no-namespace": false,
+    "interface-name": false,
+    "new-parens": true,
+    "no-arg": true,
+    "no-unused-imports": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": [true],
+    "quotemark": [true, "single"],
+    "no-console": [true],
+    "no-multi-spaces": [true],
+    "ordered-imports": false,
+    "semicolon": [true, "always"],
+    "no-floating-promises": true,
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+    "object-literal-sort-keys": false,
+    "no-unused-variable": [true, {"ignore-pattern": "^_"}],
+    "typedef": [true,
+      "call-signature",
+      "arrow-call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration",
+      "object-destructuring",
+      "array-destructuring"
+    ]
+  }
+}
