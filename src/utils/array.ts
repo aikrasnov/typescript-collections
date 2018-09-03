@@ -1,4 +1,4 @@
-export class ArrayTrasformer {
+export class ArrayTransformer {
     private array: any[];
 
     constructor(array: any[]) {

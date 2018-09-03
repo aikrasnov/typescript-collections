@@ -1,14 +1,14 @@
 // https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
 import {Printable} from '../../utils/printable';
-import {ArrayTrasformer} from '../../utils/array';
+import {ArrayTransformer} from '../../utils/array';
 
 export class Stack<T> implements Printable {
     private storage: T[];
-    private arrayTrasformer: ArrayTrasformer;
+    private arrayTrasformer: ArrayTransformer;
 
     constructor() {
         this.storage = [];
-        this.arrayTrasformer = new ArrayTrasformer(this.storage);
+        this.arrayTrasformer = new ArrayTransformer(this.storage);
     }
 
     public push(element: T): void {

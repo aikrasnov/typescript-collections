@@ -4,6 +4,10 @@ import {selectionSort} from './src/sorts/selection';
 import {Comparable} from './src/utils/comparable';
 import {OrderedArray} from './src/structures/array-based/ordered-array';
 import {Stack} from './src/structures/array-based/stack';
+import {Deque} from './src/structures/array-based/deque';
+import {Queue} from './src/structures/array-based/queue';
+import {CircularQueue} from './src/structures/array-based/queue-cycle';
+import {PriorityQueue} from './src/structures/array-based/queue-priority';
 
 class ComparableTestClass implements Comparable<ComparableTestClass> {
     private x: number;
@@ -37,9 +41,9 @@ array.push(new ComparableTestClass(-5));
 array.push(new ComparableTestClass(14));
 array.push(new ComparableTestClass(9));
 
-console.log(bubbleSort<ComparableTestClass>(array));
-console.log(bubbleSort<ComparableTestClass>(array, true));
-console.log(insertionSort<ComparableTestClass>(array));
-console.log(insertionSort<ComparableTestClass>(array, true));
-console.log(selectionSort<ComparableTestClass>(array));
-console.log(selectionSort<ComparableTestClass>(array, true));
+// console.log(bubbleSort<ComparableTestClass>(array));
+// console.log(bubbleSort<ComparableTestClass>(array, true));
+// console.log(insertionSort<ComparableTestClass>(array));
+// console.log(insertionSort<ComparableTestClass>(array, true));
+// console.log(selectionSort<ComparableTestClass>(array));
+// console.log(selectionSort<ComparableTestClass>(array, true));

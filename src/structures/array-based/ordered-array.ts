@@ -1,18 +1,18 @@
 // https://en.wikipedia.org/wiki/Sorted_array
 import {Comparable} from '../../utils/comparable';
 import {Printable} from '../../utils/printable';
-import {ArrayTrasformer} from '../../utils/array';
+import {ArrayTransformer} from '../../utils/array';
 
 export class OrderedArray<T extends Comparable<T>> implements Printable {
     private storage: T[];
-    private arrayTrasformer: ArrayTrasformer;
+    private arrayTrasformer: ArrayTransformer;
 
     /**
      * Create ordered array
      */
     constructor() {
         this.storage = [];
-        this.arrayTrasformer = new ArrayTrasformer(this.storage);
+        this.arrayTrasformer = new ArrayTransformer(this.storage);
     }
 
     public print(): void {
@@ -30,7 +30,7 @@ export class OrderedArray<T extends Comparable<T>> implements Printable {
 
         let insertIndex: number;
         for (insertIndex = 0; insertIndex < this.storage.length; insertIndex++) {
-            if (element > this.storage[insertIndex]) {
+            if (element.compareTo(this.storage[insertIndex]) === 1) {
                 break;
             }
         }
