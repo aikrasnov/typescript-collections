@@ -1,22 +1,12 @@
 // https://en.wikipedia.org/wiki/Sorted_array
 import {Comparable} from '../../utils/comparable';
-import {Printable} from '../../utils/printable';
-import {ArrayTransformer} from '../../utils/array';
+import {Collection} from '../collection';
 
-export class OrderedArray<T extends Comparable<T>> implements Printable {
-    private storage: T[];
-    private arrayTrasformer: ArrayTransformer;
+export class OrderedArray<T extends Comparable<T>> implements Collection<T> {
+    private readonly storage: T[];
 
-    /**
-     * Create ordered array
-     */
     constructor() {
         this.storage = [];
-        this.arrayTrasformer = new ArrayTransformer(this.storage);
-    }
-
-    public print(): void {
-        console.log(this.arrayTrasformer.array2String());
     }
 
     /**
@@ -36,6 +26,18 @@ export class OrderedArray<T extends Comparable<T>> implements Printable {
         }
 
         this.storage.splice(insertIndex, 0, element);
+    }
+
+    public peek(): T {
+        return this.storage[this.storage.length - 1];
+    }
+
+    public remove(): T {
+        return this.storage.pop();
+    }
+
+    public isEmpty(): boolean {
+        return this.storage.length === 0;
     }
 
     public linearSearch(value: T): boolean {

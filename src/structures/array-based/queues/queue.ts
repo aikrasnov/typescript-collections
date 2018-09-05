@@ -1,20 +1,20 @@
-// https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+// https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
 
-import {Collection} from '../collection';
+import {Collection} from '../../collection';
 
-export class Stack<T> implements Collection<T> {
-    private storage: T[];
+export class Queue<T> implements Collection<T> {
+    protected storage: T[];
 
     constructor() {
         this.storage = [];
     }
 
     public add(element: T): void {
-        this.storage.push(element);
+        this.storage.unshift(element);
     }
 
     public remove(): T {
-        return this.storage.pop();
+        return this.storage.shift();
     }
 
     public peek(): T {

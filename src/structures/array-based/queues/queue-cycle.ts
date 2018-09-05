@@ -1,19 +1,20 @@
 // https://en.wikipedia.org/wiki/Circular_buffer
 
-export class CircularQueue<T> {
+import {Queue} from './queue';
+
+export class CircularQueue<T> extends Queue<T> {
     private readonly size: number;
-    private readonly storage: T[];
     private insertPosition: number;
     private removePosition: number;
 
     constructor(size: number) {
+        super();
         this.size = size;
         this.insertPosition = 0;
         this.removePosition = 0;
-        this.storage = [];
     }
 
-    public insert(element: T): void {
+    public add(element: T): void {
         if (this.size >= this.storage.length || this.storage[this.insertPosition] !== undefined) {
             throw new Error('Queue is full!');
         }

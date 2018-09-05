@@ -1,18 +1,15 @@
 // https://en.wikipedia.org/wiki/Priority_queue
-import {Comparable} from '../../utils/comparable';
-import {Printable} from '../../utils/printable';
-import {ArrayTransformer} from '../../utils/array';
+import {Comparable} from '../../../utils/comparable';
+import {Queue} from './queue';
 
-export class PriorityQueue<T extends Comparable<T>> implements Printable {
-    private readonly storage: T[];
-    private arrayTrasnformer: ArrayTransformer;
+export class PriorityQueue<T extends Comparable<T>> extends Queue<T> {
 
     constructor() {
+        super();
         this.storage = [];
-        this.arrayTrasnformer = new ArrayTransformer(this.storage);
     }
 
-    public insert(element: T): void {
+    public add(element: T): void {
         if (this.storage.length === 0) {
             this.storage.push(element);
             return;
@@ -30,11 +27,7 @@ export class PriorityQueue<T extends Comparable<T>> implements Printable {
 
     public remove(): T {
         const result: T = this.storage[this.storage.length - 1];
-        this.storage.splice(this.storage.length - 1, 1)
+        this.storage.splice(this.storage.length - 1, 1);
         return result;
-    }
-
-    public print(): void {
-        console.log(this.arrayTrasnformer.array2String());
     }
 }

@@ -10,9 +10,9 @@ export function selectionSort<T extends Comparable<T>>(unsortedArray: T[], rever
         for (let j: number = i + 1; j < array.length; j++) {
             const compareResult: number = array[j].compareTo(array[swapIndex]);
 
-            if (compareResult === -1 && reverse) {
+            if (compareResult === -1 && !reverse) {
                 swapIndex = j;
-            } else if (compareResult === 1 && !reverse) {
+            } else if (compareResult === 1 && reverse) {
                 swapIndex = j;
             }
         }

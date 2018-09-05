@@ -1,10 +1,9 @@
 // https://en.wikipedia.org/wiki/Double-ended_queue
+import {Queue} from './queue';
 
-export class Deque<T> {
-    private readonly storage: T[];
-
+export class Deque<T> extends Queue<T> {
     constructor() {
-        this.storage = [];
+        super();
     }
 
     public pushFront(element: T): void {
