@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=8"
   },
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "npm run build && jest",
     "lint": "eslint --report-unused-disable-directives ./ --cache --format codeframe && echo '\n\\033[34mESLinted!\\033[39m\n'",
