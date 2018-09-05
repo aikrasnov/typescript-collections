@@ -2,7 +2,7 @@ import {unsorted, empty, equalValue} from './array-for-sort';
 import {insertionSort} from '../../src/sorts/insertion';
 import {ComparableTestClass} from '../comparable-test-class';
 
-describe('bubble sort', () => {
+describe('insertion sort', () => {
 
     it('should sort array', () => {
         const sorted: ComparableTestClass[] = insertionSort(unsorted);

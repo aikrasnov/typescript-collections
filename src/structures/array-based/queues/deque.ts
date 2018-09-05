@@ -6,23 +6,11 @@ export class Deque<T> extends Queue<T> {
         super();
     }
 
-    public pushFront(element: T): void {
-        for (let i: number = this.storage.length; i > 0; i--) {
-            this.storage[i] = this.storage[i - 1];
-        }
-
-        this.storage[0] = element;
+    public addToBack(element: T): void {
+        this.storage.push(element);
     }
 
-    public pushBack(element: T): void {
-        this.storage[this.storage.length] = element;
-    }
-
-    public popFront(): T {
-        return this.storage.splice(0, 1)[0];
-    }
-
-    public popBack(): T {
-        return this.storage.splice(this.storage.length - 1, 1)[0];
+    public removeFromFront(): T | undefined {
+        return this.storage.pop();
     }
 }

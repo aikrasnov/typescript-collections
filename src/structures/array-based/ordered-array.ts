@@ -28,11 +28,11 @@ export class OrderedArray<T extends Comparable<T>> implements Collection<T> {
         this.storage.splice(insertIndex, 0, element);
     }
 
-    public peek(): T {
+    public peek(): T | undefined {
         return this.storage[this.storage.length - 1];
     }
 
-    public remove(): T {
+    public remove(): T | undefined {
         return this.storage.pop();
     }
 

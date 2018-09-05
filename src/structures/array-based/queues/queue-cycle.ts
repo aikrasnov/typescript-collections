@@ -27,7 +27,7 @@ export class CircularQueue<T> extends Queue<T> {
         }
     }
 
-    public remove(): T {
+    public remove(): T | undefined {
         const result: T = this.storage[this.removePosition];
         this.storage[this.removePosition] = undefined;
         this.removePosition++;

@@ -2,8 +2,8 @@
 
 import {Collection} from '../collection';
 
-export class Stack<T> implements Collection<T> {
-    private storage: T[];
+export class Stack<T = any> implements Collection<T> {
+    private readonly storage: T[];
 
     constructor() {
         this.storage = [];
@@ -17,7 +17,7 @@ export class Stack<T> implements Collection<T> {
         return this.storage.pop();
     }
 
-    public peek(): T {
+    public peek(): T | undefined {
         return this.storage[this.storage.length - 1];
     }
 

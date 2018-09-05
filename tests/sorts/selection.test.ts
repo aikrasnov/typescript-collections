@@ -2,7 +2,7 @@ import {unsorted, empty, equalValue} from './array-for-sort';
 import {selectionSort} from '../../src/sorts/selection';
 import {ComparableTestClass} from '../comparable-test-class';
 
-describe('bubble sort', () => {
+describe('selection sort', () => {
 
     it('should sort array', () => {
         const sorted: ComparableTestClass[] = selectionSort(unsorted);

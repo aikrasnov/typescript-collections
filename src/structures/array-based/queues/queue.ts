@@ -13,11 +13,11 @@ export class Queue<T> implements Collection<T> {
         this.storage.unshift(element);
     }
 
-    public remove(): T {
+    public remove(): T | undefined {
         return this.storage.shift();
     }
 
-    public peek(): T {
+    public peek(): T | undefined {
         return this.storage[this.storage.length - 1];
     }
 

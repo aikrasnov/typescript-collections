@@ -25,7 +25,7 @@ export class PriorityQueue<T extends Comparable<T>> extends Queue<T> {
         this.storage.splice(insertIndex, 0, element);
     }
 
-    public remove(): T {
+    public remove(): T | undefined {
         const result: T = this.storage[this.storage.length - 1];
         this.storage.splice(this.storage.length - 1, 1);
         return result;
