@@ -28,12 +28,18 @@ export class OrderedArray<T extends Comparable<T>> implements Collection<T> {
         this.storage.splice(insertIndex, 0, element);
     }
 
+    /**
+     * Get the largest element
+     */
     public peek(): T | undefined {
-        return this.storage[this.storage.length - 1];
+        return this.storage[0];
     }
 
+    /**
+     * Get and remove from array the largest element
+     */
     public remove(): T | undefined {
-        return this.storage.pop();
+        return this.storage.shift();
     }
 
     public isEmpty(): boolean {
