@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-- "8"
+  - "8"
 scripts:
-- npm install codecov -g
+  - npm install codecov -g
 after_success:
-- codecov
+  - codecov
