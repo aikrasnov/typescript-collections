@@ -1,5 +1,5 @@
 import {unsorted, empty, equalValue} from './array-for-sort';
-import {bubbleSort} from '../../src/sorts/bubble';
+import {bubbleSort} from '../../index';
 import {ComparableTestClass} from '../comparable-test-class';
 
 describe('bubble sort', () => {

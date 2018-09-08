@@ -14,7 +14,7 @@ export class Queue<T> implements Collection<T> {
     }
 
     public remove(): T | undefined {
-        return this.storage.shift();
+        return this.storage.pop();
     }
 
     public peek(): T | undefined {

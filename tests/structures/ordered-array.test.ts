@@ -1,4 +1,4 @@
-import {OrderedArray} from '../../src/structures/array-based/ordered-array';
+import {OrderedArray} from '../../index';
 import {ComparableTestClass} from '../comparable-test-class';
 
 const orderedArray: OrderedArray<ComparableTestClass> = new OrderedArray<ComparableTestClass>();
@@ -16,19 +16,19 @@ const elems: ComparableTestClass[] = [
 
 describe('ordered array', () => {
 
-    it('array should be empty', async () => {
+    it('array should be empty', () => {
         expect(orderedArray.isEmpty()).toStrictEqual(true);
     });
 
-    it('peek should return undefined', async () => {
+    it('peek should return undefined', () => {
         expect(orderedArray.peek()).toStrictEqual(undefined);
     });
 
-    it('remove should return undefined', async () => {
+    it('remove should return undefined', () => {
         expect(orderedArray.remove()).toStrictEqual(undefined);
     });
 
-    it('should add element to array', async () => {
+    it('should add element to array', () => {
         for (const elem of elems) {
             expect(orderedArray.linearSearch(elem)).toStrictEqual(false);
             orderedArray.add(elem);
@@ -38,12 +38,12 @@ describe('ordered array', () => {
         expect(orderedArray.peek()).toStrictEqual(elems[7]);
     });
 
-    it('should remove largest element', async () => {
+    it('should remove largest element', () => {
         expect(orderedArray.remove()).toStrictEqual(elems[7]);
         expect(orderedArray.peek()).toStrictEqual(elems[6]);
     });
 
-    it('search should return false for missing elements', async () => {
+    it('search should return false for missing elements', () => {
         const missingElems: ComparableTestClass[] = [
             new ComparableTestClass(9999),
             new ComparableTestClass(-9999),
@@ -59,7 +59,7 @@ describe('ordered array', () => {
         }
     });
 
-    it('search should return true for existing elements', async () => {
+    it('search should return true for existing elements', () => {
         const existingElems: ComparableTestClass[] = elems.slice(0, 1);
 
         for (const elem of existingElems) {
@@ -68,7 +68,7 @@ describe('ordered array', () => {
         }
     });
 
-    it('array should not be empty', async () => {
+    it('array should not be empty', () => {
         expect(orderedArray.isEmpty()).toStrictEqual(false);
     });
 });

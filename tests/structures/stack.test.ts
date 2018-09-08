@@ -1,4 +1,4 @@
-import {Stack} from '../../src/structures/array-based/stack';
+import {Stack} from '../../index';
 
 const stack: Stack = new Stack();
 

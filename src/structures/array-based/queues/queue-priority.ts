@@ -17,7 +17,7 @@ export class PriorityQueue<T extends Comparable<T>> extends Queue<T> {
 
         let insertIndex: number;
         for (insertIndex = 0; insertIndex < this.storage.length; insertIndex++) {
-            if (element.compareTo(element) === 1) {
+            if (this.storage[insertIndex].compareTo(element) === 1) {
                 break;
             }
         }

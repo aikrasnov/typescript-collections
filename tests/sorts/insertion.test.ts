@@ -1,5 +1,5 @@
 import {unsorted, empty, equalValue} from './array-for-sort';
-import {insertionSort} from '../../src/sorts/insertion';
+import {insertionSort} from '../../index';
 import {ComparableTestClass} from '../comparable-test-class';
 
 describe('insertion sort', () => {

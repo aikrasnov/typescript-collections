@@ -1,5 +1,5 @@
 import {unsorted, empty, equalValue} from './array-for-sort';
-import {selectionSort} from '../../src/sorts/selection';
+import {selectionSort} from '../../index';
 import {ComparableTestClass} from '../comparable-test-class';
 
 describe('selection sort', () => {

@@ -6,6 +6,10 @@ import {Queue} from './src/structures/array-based/queues/queue';
 import {CircularQueue} from './src/structures/array-based/queues/queue-cycle';
 import {PriorityQueue} from './src/structures/array-based/queues/queue-priority';
 
+import {bubbleSort} from './src/sorts/bubble';
+import {selectionSort} from './src/sorts/selection';
+import {insertionSort} from './src/sorts/insertion';
+
 export {
     Collection,
     Stack,
@@ -14,4 +18,7 @@ export {
     Queue,
     CircularQueue,
     PriorityQueue,
+    bubbleSort,
+    selectionSort,
+    insertionSort,
 };
