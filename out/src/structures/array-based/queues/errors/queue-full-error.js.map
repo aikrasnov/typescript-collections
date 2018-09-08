@@ -1,0 +1,1 @@
+{"version":3,"file":"queue-full-error.js","sourceRoot":"","sources":["../../../../../../src/structures/array-based/queues/errors/queue-full-error.ts"],"names":[],"mappings":";;AAAA,MAAa,cAAe,SAAQ,KAAK;IACrC,YAAY,UAAkB,gBAAgB;QAC1C,KAAK,CAAC,OAAO,CAAC,CAAC;QAEf,MAAM,CAAC,cAAc,CAAC,IAAI,EAAE,cAAc,CAAC,SAAS,CAAC,CAAC;IAC1D,CAAC;CACJ;AAND,wCAMC"}
