@@ -10,11 +10,11 @@ export class Deque<T> extends Queue<T> {
         this.storage.push(element);
     }
 
-    public removeFromFront(): T | undefined {
+    public removeFromFront(): T {
         return this.storage.shift();
     }
 
-    public peekFront(): T | undefined {
+    public peekFront(): T {
         return this.storage[0];
     }
 }

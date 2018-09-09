@@ -5,12 +5,16 @@ import {Deque} from './src/structures/array-based/queues/deque';
 import {Queue} from './src/structures/array-based/queues/queue';
 import {CircularQueue} from './src/structures/array-based/queues/queue-cycle';
 import {PriorityQueue} from './src/structures/array-based/queues/queue-priority';
+import {SinglyLinkedList} from './src/structures/lists/singly-linked-list';
+import {DoublyLinkedList} from './src/structures/lists/doubly-linked-list';
 
 import {bubbleSort} from './src/sorts/bubble';
 import {selectionSort} from './src/sorts/selection';
 import {insertionSort} from './src/sorts/insertion';
 
 export {
+    DoublyLinkedList,
+    SinglyLinkedList,
     Collection,
     Stack,
     OrderedArray,

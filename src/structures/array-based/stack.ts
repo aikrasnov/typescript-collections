@@ -17,7 +17,7 @@ export class Stack<T = any> implements Collection<T> {
         return this.storage.pop();
     }
 
-    public peek(): T | undefined {
+    public peek(): T {
         return this.storage[this.storage.length - 1];
     }
 

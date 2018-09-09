@@ -29,7 +29,7 @@ export class CircularQueue<T> implements Collection<T> {
         }
     }
 
-    public remove(): T | undefined {
+    public remove(): T {
         const result: T = this.storage[this.removePosition];
         delete this.storage[this.removePosition];
 
@@ -43,7 +43,7 @@ export class CircularQueue<T> implements Collection<T> {
         return result;
     }
 
-    public peek(): T | undefined {
+    public peek(): T {
         return this.storage[this.removePosition];
     }
 

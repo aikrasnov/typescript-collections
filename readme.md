@@ -8,3 +8,5 @@ Now available:
 * circular queue
 * priority queue
 * deque
+* singly linked list
+* doubly linked list

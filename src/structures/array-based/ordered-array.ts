@@ -31,14 +31,14 @@ export class OrderedArray<T extends Comparable<T>> implements Collection<T> {
     /**
      * Get the largest element
      */
-    public peek(): T | undefined {
+    public peek(): T {
         return this.storage[0];
     }
 
     /**
      * Get and remove from array the largest element
      */
-    public remove(): T | undefined {
+    public remove(): T {
         return this.storage.shift();
     }
 

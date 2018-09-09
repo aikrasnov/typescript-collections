@@ -24,7 +24,7 @@ describe('selection sort', () => {
         selectionSort(empty);
     });
 
-    it('should sort array of equal values', async () => {
+    it('should sort array of equal values', () => {
         const sorted: ComparableTestClass[] = selectionSort(equalValue);
 
         for (let i: number = 0; i < sorted.length - 1; i++) {
@@ -32,7 +32,7 @@ describe('selection sort', () => {
         }
     });
 
-    it('should sort array of equal values (reverse)', async () => {
+    it('should sort array of equal values (reverse)', () => {
         const sorted: ComparableTestClass[] = selectionSort(equalValue);
 
         for (let i: number = 0; i < sorted.length - 1; i++) {

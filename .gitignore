@@ -2,6 +2,7 @@
 .idea
 .vscode
 out/coverage/*
+out/*
 
 npm-debug.log
 node_modules
