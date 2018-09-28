@@ -22,4 +22,6 @@ const selection_1 = require("./src/sorts/selection");
 exports.selectionSort = selection_1.selectionSort;
 const insertion_1 = require("./src/sorts/insertion");
 exports.insertionSort = insertion_1.insertionSort;
+const merge_1 = require("./src/sorts/merge");
+exports.mergeSort = merge_1.mergeSort;
 //# sourceMappingURL=index.js.map

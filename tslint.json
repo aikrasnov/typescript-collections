@@ -3,6 +3,12 @@
     "tslint:recommended",
     "tslint-eslint-rules"
   ],
+  "linterOptions": {
+    "exclude": [
+      "./out/*",
+      "./coverage/*"
+    ]
+  },
   "rules": {
     "no-namespace": false,
     "interface-name": false,

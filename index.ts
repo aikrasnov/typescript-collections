@@ -11,6 +11,7 @@ import {DoublyLinkedList} from './src/structures/lists/doubly-linked-list';
 import {bubbleSort} from './src/sorts/bubble';
 import {selectionSort} from './src/sorts/selection';
 import {insertionSort} from './src/sorts/insertion';
+import {mergeSort} from './src/sorts/merge';
 
 export {
     DoublyLinkedList,
@@ -25,4 +26,5 @@ export {
     bubbleSort,
     selectionSort,
     insertionSort,
+    mergeSort,
 };

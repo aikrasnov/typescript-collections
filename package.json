@@ -10,23 +10,24 @@
     "codecov": "codecov -t 0d8c3d17-0d64-4006-abf6-131bb2c4bccc",
     "test": "npm run build && jest",
     "lint": "eslint --report-unused-disable-directives ./ --cache --format codeframe && echo '\n\\033[34mESLinted!\\033[39m\n'",
+    "tslint": "tslint --config ./tslint.json --project ./tsconfig.json",
     "build": "rm -rf ./out && tsc"
   },
   "author": "Aleksander Krasnovv",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "23.3.1",
-    "@types/node": "10.9.4",
+    "@types/jest": "23.3.2",
+    "@types/node": "10.11.2",
     "codecov": "3.1.0",
-    "eslint": "5.5.0",
+    "eslint": "5.6.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-plugin-import": "2.14.0",
-    "jest": "23.5.0",
-    "ts-jest": "23.1.4",
+    "jest": "23.6.0",
+    "ts-jest": "23.10.2",
     "tslint": "5.11.0",
     "tslint-eslint-rules": "5.4.0",
-    "typescript": "3.0.3"
+    "typescript": "3.1.1"
   },
   "jest": {
     "verbose": true,
