@@ -1,10 +1,8 @@
 .DS_Store
 .idea
 .vscode
-out/coverage/*
 out
-out/*
-coverage/*
+coverage
 
 npm-debug.log
 node_modules
