@@ -1,7 +1,6 @@
 import {DoublyLinkedList} from '../../../index';
 
 const linkedList: DoublyLinkedList<any> = new DoublyLinkedList<any>();
-const maxSize: number = 10;
 
 describe('doubly linked list', () => {
 
