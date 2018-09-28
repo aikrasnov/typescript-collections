@@ -30,9 +30,6 @@ describe('doubly linked list', () => {
         linkedList.add(3);
 
         expect(linkedList.peek()).toStrictEqual(3);
-    });
-
-    it('should be not empty', () => {
         expect(linkedList.isEmpty()).toStrictEqual(false);
     });
 
